@@ -1,0 +1,217 @@
+============================================================
+R Assignment 3 Output
+Exercises 13–17 and 20–26
+============================================================
+
+============================================================
+Ex. 13 — What does this do?
+============================================================
+
+The code creates 1000 random numbers from a normal distribution.
+The distribution has a mean of 10.
+By default, the standard deviation is 1.
+Then it prints the mean and variance rounded to 2 decimal places.
+
+mean:	10.02
+var:	0.98
+
+
+============================================================
+Ex. 14 — Decode the Secret Message
+============================================================
+
+Secret message:
+[1] "Congratulations! You found the  secrt message."
+
+
+============================================================
+Ex. 15 — Function to Reverse the Case of a String
+============================================================
+
+reverse_case('Hello World'):
+[1] "hELLO wORLD"
+
+reverse_case('R Programming'):
+[1] "r pROGRAMMING"
+
+reverse_case('aBcDeF'):
+[1] "AbCdEf"
+
+reverse_case('CONGRATULATIONS you FOUND it'):
+[1] "congratulations YOU found IT"
+
+
+============================================================
+Ex. 16 — Check Whether the Numbers Are Palindromes
+============================================================
+
+Is num1 a palindrome?
+[1] TRUE
+
+Is num2 a palindrome?
+[1] TRUE
+
+Clear answer:
+num1 is a palindrome.
+num2 is a palindrome.
+
+
+============================================================
+Ex. 17 — Function chomp()
+============================================================
+
+chomp('a&c') = c
+chomp('a&') = 
+chomp('abc') = abc
+
+Explanation:
+The chomp function removes every '&' symbol.
+It also removes the character immediately to the left of each '&'.
+
+
+============================================================
+Problems 20–26 — Data Frames
+============================================================
+
+Original dataframe:
+  workshop gender q1 q2 q3 q4
+1        R Female  4  3  4  5
+2     SPSS   Male  3  4  3  4
+3     <NA>   <NA>  3  2 NA  3
+4     SPSS Female  5  4  5  3
+5    STATA Female  4  4  3  4
+6     SPSS Female  5  4  3  5
+
+
+============================================================
+Ex. 20 — First Two Columns
+============================================================
+
+  workshop gender
+1        R Female
+2     SPSS   Male
+3     <NA>   <NA>
+4     SPSS Female
+5    STATA Female
+6     SPSS Female
+
+
+============================================================
+Ex. 21 — First and Last Row
+============================================================
+
+  workshop gender q1 q2 q3 q4
+1        R Female  4  3  4  5
+6     SPSS Female  5  4  3  5
+
+
+============================================================
+Ex. 22 — as.list(df) and unlist(df)
+============================================================
+
+as.list(df):
+$workshop
+[1] "R"     "SPSS"  NA      "SPSS"  "STATA" "SPSS" 
+
+$gender
+[1] Female Male   <NA>   Female Female Female
+Levels: Female Male
+
+$q1
+[1] 4 3 3 5 4 5
+
+$q2
+[1] 3 4 2 4 4 4
+
+$q3
+[1]  4  3 NA  5  3  3
+
+$q4
+[1] 5 4 3 3 4 5
+
+
+unlist(df):
+workshop1 workshop2 workshop3 workshop4 workshop5 workshop6   gender1 
+      "R"    "SPSS"        NA    "SPSS"   "STATA"    "SPSS"       "1" 
+  gender2   gender3   gender4   gender5   gender6       q11       q12 
+      "2"        NA       "1"       "1"       "1"       "4"       "3" 
+      q13       q14       q15       q16       q21       q22       q23 
+      "3"       "5"       "4"       "5"       "3"       "4"       "2" 
+      q24       q25       q26       q31       q32       q33       q34 
+      "4"       "4"       "4"       "4"       "3"        NA       "5" 
+      q35       q36       q41       q42       q43       q44       q45 
+      "3"       "3"       "5"       "4"       "3"       "3"       "4" 
+      q46 
+      "5" 
+
+Explanation:
+as.list(df) converts the dataframe into a list where each column is one list element.
+unlist(df) converts the dataframe into one long vector containing all values.
+
+
+============================================================
+Ex. 23 — Create df2 with q3 and q4 Changed to 0
+============================================================
+
+  workshop gender q1 q2 q3 q4
+1        R Female  4  3  0  0
+2     SPSS   Male  3  4  0  0
+3     <NA>   <NA>  3  2  0  0
+4     SPSS Female  5  4  0  0
+5    STATA Female  4  4  0  0
+6     SPSS Female  5  4  0  0
+
+
+============================================================
+Ex. 24 — Sort df by Gender
+============================================================
+
+  workshop gender q1 q2 q3 q4
+1        R Female  4  3  4  5
+4     SPSS Female  5  4  5  3
+5    STATA Female  4  4  3  4
+6     SPSS Female  5  4  3  5
+2     SPSS   Male  3  4  3  4
+3     <NA>   <NA>  3  2 NA  3
+
+
+============================================================
+Ex. 25 — Duplicate Rows in df and df2
+============================================================
+
+Duplicate rows in df:
+[1] FALSE FALSE FALSE FALSE FALSE FALSE
+
+Does df have duplicate rows?
+[1] FALSE
+
+Duplicate rows in df2:
+[1] FALSE FALSE FALSE FALSE FALSE  TRUE
+
+Does df2 have duplicate rows?
+[1] TRUE
+
+Clear answer:
+df does not have duplicate rows.
+df2 has duplicate rows.
+
+
+============================================================
+Ex. 26 — na.omit(df)
+============================================================
+
+Result of na.omit(df):
+  workshop gender q1 q2 q3 q4
+1        R Female  4  3  4  5
+2     SPSS   Male  3  4  3  4
+4     SPSS Female  5  4  5  3
+5    STATA Female  4  4  3  4
+6     SPSS Female  5  4  3  5
+
+Explanation:
+na.omit(df) removes any row that contains at least one NA value.
+In this dataset, row 3 is removed because it contains missing values.
+
+============================================================
+End of R Assignment 3 Output
+============================================================

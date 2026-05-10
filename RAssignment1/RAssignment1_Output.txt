@@ -1,0 +1,496 @@
+============================================================
+R Assignment 1 Output
+============================================================
+
+============================================================
+Problem 1: Missing Values
+============================================================
+
+Preview of rainforest dataset:
+   dbh wood bark root rootsk branch         species
+27   6   NA   NA    6    0.3     NA Acacia mabellae
+61  23  353   NA  135   13.0     35 Acacia mabellae
+62  20  208   NA   NA     NA     41 Acacia mabellae
+63  23  445   NA   NA     NA     50 Acacia mabellae
+65  24  590   NA   NA     NA     NA Acacia mabellae
+80   5   14   NA    2    2.4     NA Acacia mabellae
+
+Complete and incomplete root values grouped by species:
+       species
+        Acacia mabellae C. fraseri Acmena smithii
+  FALSE               7         12             26
+  TRUE                9          0              0
+       species
+        B. myrtifolia
+  FALSE             7
+  TRUE              4
+
+Number of complete root values for each species:
+Acacia mabellae      C. fraseri  Acmena smithii 
+              9               0               0 
+  B. myrtifolia 
+              4 
+
+Explanation:
+FALSE means the root value is missing.
+TRUE means the root value is complete, meaning it is not missing.
+
+Preview of Pima.tr2 dataset:
+  npreg glu bp skin  bmi   ped age type
+1     5  86 68   28 30.2 0.364  24   No
+2     7 195 70   33 25.1 0.163  55  Yes
+3     5  77 82   41 35.8 0.156  35   No
+4     0 165 76   43 47.9 0.259  26   No
+5     0 107 60   25 26.4 0.133  23   No
+6     5  97 76   27 35.6 0.378  52  Yes
+
+Missing values in Pima.tr2 grouped by type:
+    npreg glu bp skin bmi ped age type
+No      0   0  5   60   2   0   0    0
+Yes     0   0  8   38   1   0   0    0
+
+Explanation:
+Each number shows how many missing values are in that column for each type group.
+The variable type groups the rows by diabetes status.
+
+============================================================
+Problem 2: Useful Functions
+============================================================
+
+Part A: Number of rows
+
+Number of rows in tinting:
+[1] 182
+
+Number of rows in possum:
+[1] 104
+
+Number of rows in possumsites:
+[1] 7
+
+
+Part B: Calculations
+
+Vector x containing numbers 1 to 21:
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+[19] 19 20 21
+
+Mean of x:
+[1] 11
+
+Range of x:
+[1]  1 21
+
+Sum of x:
+[1] 231
+
+Median of x:
+[1] 11
+
+Vector x containing 100 random values:
+  [1] -0.560475647 -0.230177489  1.558708314  0.070508391
+  [5]  0.129287735  1.715064987  0.460916206 -1.265061235
+  [9] -0.686852852 -0.445661970  1.224081797  0.359813827
+ [13]  0.400771451  0.110682716 -0.555841135  1.786913137
+ [17]  0.497850478 -1.966617157  0.701355902 -0.472791408
+ [21] -1.067823706 -0.217974915 -1.026004448 -0.728891229
+ [25] -0.625039268 -1.686693311  0.837787044  0.153373118
+ [29] -1.138136937  1.253814921  0.426464221 -0.295071483
+ [33]  0.895125661  0.878133488  0.821581082  0.688640254
+ [37]  0.553917654 -0.061911711 -0.305962664 -0.380471001
+ [41] -0.694706979 -0.207917278 -1.265396352  2.168955965
+ [45]  1.207961998 -1.123108583 -0.402884835 -0.466655354
+ [49]  0.779965118 -0.083369066  0.253318514 -0.028546755
+ [53] -0.042870457  1.368602284 -0.225770986  1.516470604
+ [57] -1.548752804  0.584613750  0.123854244  0.215941569
+ [61]  0.379639483 -0.502323453 -0.333207384 -1.018575383
+ [65] -1.071791226  0.303528641  0.448209779  0.053004227
+ [69]  0.922267468  2.050084686 -0.491031166 -2.309168876
+ [73]  1.005738524 -0.709200763 -0.688008616  1.025571370
+ [77] -0.284773007 -1.220717712  0.181303480 -0.138891362
+ [81]  0.005764186  0.385280401 -0.370660032  0.644376549
+ [85] -0.220486562  0.331781964  1.096839013  0.435181491
+ [89] -0.325931586  1.148807618  0.993503856  0.548396960
+ [93]  0.238731735 -0.627906076  1.360652449 -0.600259587
+ [97]  2.187332993  1.532610626 -0.235700359 -1.026420900
+
+Mean of random x:
+[1] 0.09040591
+
+Range of random x:
+[1] -2.309169  2.187333
+
+Sum of random x:
+[1] 9.040591
+
+Median of random x:
+[1] 0.06175631
+
+Women dataset:
+   height weight
+1      58    115
+2      59    117
+3      60    120
+4      61    123
+5      62    126
+6      63    129
+7      64    132
+8      65    135
+9      66    139
+10     67    142
+11     68    146
+12     69    150
+13     70    154
+14     71    159
+15     72    164
+
+Height column statistics:
+
+Mean of height:
+[1] 65
+
+Range of height:
+[1] 58 72
+
+Sum of height:
+[1] 975
+
+Median of height:
+[1] 65
+
+Weight column statistics:
+
+Mean of weight:
+[1] 136.7333
+
+Range of weight:
+[1] 115 164
+
+Sum of weight:
+[1] 2051
+
+Median of weight:
+[1] 135
+
+
+============================================================
+Problem 3: Paste
+============================================================
+
+Original paste examples:
+
+paste("Leo", "the", "lion"):
+[1] "Leo the lion"
+
+paste("a", "b"):
+[1] "a b"
+
+paste("a", "b", sep = ""):
+[1] "ab"
+
+paste(1:5):
+[1] "1" "2" "3" "4" "5"
+
+paste(1:5, collapse = ""):
+[1] "12345"
+
+Changing sep = "" to sep = ",":
+
+paste("a", "b", sep = ","):
+[1] "a,b"
+
+paste("Leo", "the", "lion", sep = ","):
+[1] "Leo,the,lion"
+
+Explanation of sep:
+The sep command controls what goes between items that are pasted together.
+For example, sep = "" puts nothing between the items.
+sep = "," puts a comma between the items.
+sep = " " puts a space between the items.
+
+Explanation of collapse:
+The collapse command combines multiple results into one single string.
+For example, paste(1:5) gives separate character values.
+But paste(1:5, collapse = "") combines them into one value: "12345".
+
+Extra examples:
+
+paste(1:5, collapse = ","):
+[1] "1,2,3,4,5"
+
+paste(1:5, collapse = " "):
+[1] "1 2 3 4 5"
+
+paste("Number", 1:5, sep = "-", collapse = ", "):
+[1] "Number-1, Number-2, Number-3, Number-4, Number-5"
+
+
+============================================================
+Problem 4: Loops
+============================================================
+
+What happens if <= is changed to <?
+If the loop is written as while(i < 10), the condition becomes false when i reaches 10.
+If i is printed before increasing, it prints 1 through 9.
+If i is increased before printing, it prints 2 through 10.
+
+Example where i is printed before increasing:
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+
+What happens if you remove i <- i + 1?
+The loop never ends because i never changes.
+This creates an infinite loop.
+Do not run that version unless you are ready to stop it manually.
+
+For loop: number, square, and cube from 1 to 5
+number square   cube 
+     1      1      1 
+number square   cube 
+     2      4      8 
+number square   cube 
+     3      9     27 
+number square   cube 
+     4     16     64 
+number square   cube 
+     5     25    125 
+
+While loop: number, square, and cube from 1 to 5
+number square   cube 
+     1      1      1 
+number square   cube 
+     2      4      8 
+number square   cube 
+     3      9     27 
+number square   cube 
+     4     16     64 
+number square   cube 
+     5     25    125 
+
+
+============================================================
+Problem 5: Sorting
+============================================================
+
+First few rows of rainforest:
+   dbh wood bark root rootsk branch         species
+27   6   NA   NA    6    0.3     NA Acacia mabellae
+61  23  353   NA  135   13.0     35 Acacia mabellae
+62  20  208   NA   NA     NA     41 Acacia mabellae
+63  23  445   NA   NA     NA     50 Acacia mabellae
+65  24  590   NA   NA     NA     NA Acacia mabellae
+80   5   14   NA    2    2.4     NA Acacia mabellae
+
+Original Acmena data frame:
+    dbh wood bark root rootsk branch        species
+114  25  506   NA   NA     NA     45 Acmena smithii
+115  24  508   NA   NA     NA     65 Acmena smithii
+116  31  817   NA   NA     NA     95 Acmena smithii
+117  21  274   NA   NA     NA     31 Acmena smithii
+118  16  162   NA   NA     NA     25 Acmena smithii
+119  27  540   NA   NA     NA     55 Acmena smithii
+120  19  272   NA   NA     NA     52 Acmena smithii
+121  21  293   NA   NA     NA     NA Acmena smithii
+122  10   77   NA   NA     NA     NA Acmena smithii
+123  23  408   NA   NA     NA     NA Acmena smithii
+135   9   40   NA   NA     NA     NA Acmena smithii
+136  17  216   NA   NA     NA     40 Acmena smithii
+137  17  208   NA   NA     NA     NA Acmena smithii
+138  10   50   NA   NA     NA     NA Acmena smithii
+139   6   18   NA   NA     NA     NA Acmena smithii
+140  22  382   NA   NA     NA     NA Acmena smithii
+141  15  161   NA   NA     NA     NA Acmena smithii
+142  15  140   NA   NA     NA     NA Acmena smithii
+143  19  280   NA   NA     NA     NA Acmena smithii
+144  11   84   NA   NA     NA     NA Acmena smithii
+145   9   50   NA   NA     NA     NA Acmena smithii
+146  25  510   NA   NA     NA     45 Acmena smithii
+147  22  400   NA   NA     NA     35 Acmena smithii
+148  10   70   NA   NA     NA     NA Acmena smithii
+149  12  115   NA   NA     NA     NA Acmena smithii
+150  48 1530   NA   NA     NA    120 Acmena smithii
+
+Order of rows based on increasing dbh:
+ [1] 15 11 21  9 14 24 20 25 17 18  5 12 13  7 19  4  8 16
+[19] 23 10  2  1 22  6  3 26
+
+Acmena sorted by increasing dbh:
+    dbh wood bark root rootsk branch        species
+139   6   18   NA   NA     NA     NA Acmena smithii
+135   9   40   NA   NA     NA     NA Acmena smithii
+145   9   50   NA   NA     NA     NA Acmena smithii
+122  10   77   NA   NA     NA     NA Acmena smithii
+138  10   50   NA   NA     NA     NA Acmena smithii
+148  10   70   NA   NA     NA     NA Acmena smithii
+144  11   84   NA   NA     NA     NA Acmena smithii
+149  12  115   NA   NA     NA     NA Acmena smithii
+141  15  161   NA   NA     NA     NA Acmena smithii
+142  15  140   NA   NA     NA     NA Acmena smithii
+118  16  162   NA   NA     NA     25 Acmena smithii
+136  17  216   NA   NA     NA     40 Acmena smithii
+137  17  208   NA   NA     NA     NA Acmena smithii
+120  19  272   NA   NA     NA     52 Acmena smithii
+143  19  280   NA   NA     NA     NA Acmena smithii
+117  21  274   NA   NA     NA     31 Acmena smithii
+121  21  293   NA   NA     NA     NA Acmena smithii
+140  22  382   NA   NA     NA     NA Acmena smithii
+147  22  400   NA   NA     NA     35 Acmena smithii
+123  23  408   NA   NA     NA     NA Acmena smithii
+115  24  508   NA   NA     NA     65 Acmena smithii
+114  25  506   NA   NA     NA     45 Acmena smithii
+146  25  510   NA   NA     NA     45 Acmena smithii
+119  27  540   NA   NA     NA     55 Acmena smithii
+116  31  817   NA   NA     NA     95 Acmena smithii
+150  48 1530   NA   NA     NA    120 Acmena smithii
+
+Original possumsites data frame:
+            Longitude  Latitude altitude
+Cambarville  145.8833 -37.55000      800
+Bellbird     148.8000 -37.61667      300
+Allyn River  151.4667 -32.11667      300
+Whian Whian  153.3333 -28.61667      400
+Byrangery    153.4167 -28.61667      200
+Conondale    152.5833 -26.43333      400
+Bulburin     151.4667 -24.55000      600
+
+Order of possumsites row names:
+[1] 3 2 7 5 1 6 4
+
+Possumsites sorted by row names in alphanumeric order:
+            Longitude  Latitude altitude
+Allyn River  151.4667 -32.11667      300
+Bellbird     148.8000 -37.61667      300
+Bulburin     151.4667 -24.55000      600
+Byrangery    153.4167 -28.61667      200
+Cambarville  145.8833 -37.55000      800
+Conondale    152.5833 -26.43333      400
+Whian Whian  153.3333 -28.61667      400
+
+
+============================================================
+Problem 6: Functions
+============================================================
+
+Original vector x:
+[1] 1 2 3 4 5
+
+Mean of x:
+[1] 3
+
+Standard deviation of x:
+[1] 1.581139
+
+Combined mean and standard deviation in one vector y:
+[1] 3.000000 1.581139
+
+Using meanANDsd function on original x:
+              mean standard_deviation 
+          3.000000           1.581139 
+
+Random vector x with 20 numbers:
+ [1] -0.71040656  0.25688371 -0.24669188 -0.34754260
+ [5] -0.95161857 -0.04502772 -0.78490447 -1.66794194
+ [9] -0.38022652  0.91899661 -0.57534696  0.60796432
+[13] -1.61788271 -0.05556197  0.51940720  0.30115336
+[17]  0.10567619 -0.64070601 -0.84970435 -1.02412879
+
+Mean and standard deviation of random x:
+              mean standard_deviation 
+        -0.3593805          0.7010640 
+
+
+============================================================
+Problem 7: Scatterplots
+============================================================
+
+Acmena data:
+    dbh wood bark root rootsk branch        species
+114  25  506   NA   NA     NA     45 Acmena smithii
+115  24  508   NA   NA     NA     65 Acmena smithii
+116  31  817   NA   NA     NA     95 Acmena smithii
+117  21  274   NA   NA     NA     31 Acmena smithii
+118  16  162   NA   NA     NA     25 Acmena smithii
+119  27  540   NA   NA     NA     55 Acmena smithii
+120  19  272   NA   NA     NA     52 Acmena smithii
+121  21  293   NA   NA     NA     NA Acmena smithii
+122  10   77   NA   NA     NA     NA Acmena smithii
+123  23  408   NA   NA     NA     NA Acmena smithii
+135   9   40   NA   NA     NA     NA Acmena smithii
+136  17  216   NA   NA     NA     40 Acmena smithii
+137  17  208   NA   NA     NA     NA Acmena smithii
+138  10   50   NA   NA     NA     NA Acmena smithii
+139   6   18   NA   NA     NA     NA Acmena smithii
+140  22  382   NA   NA     NA     NA Acmena smithii
+141  15  161   NA   NA     NA     NA Acmena smithii
+142  15  140   NA   NA     NA     NA Acmena smithii
+143  19  280   NA   NA     NA     NA Acmena smithii
+144  11   84   NA   NA     NA     NA Acmena smithii
+145   9   50   NA   NA     NA     NA Acmena smithii
+146  25  510   NA   NA     NA     45 Acmena smithii
+147  22  400   NA   NA     NA     35 Acmena smithii
+148  10   70   NA   NA     NA     NA Acmena smithii
+149  12  115   NA   NA     NA     NA Acmena smithii
+150  48 1530   NA   NA     NA    120 Acmena smithii
+
+Coefficients for log10 scale:
+(Intercept)  log10(dbh) 
+ -0.4050467   2.2053209 
+
+Equation for fitted relationship:
+log10(wood) = 2.205321 * log10(dbh) + -0.4050467
+
+Coefficients for natural log scale:
+(Intercept)    log(dbh) 
+ -0.9326546   2.2053209 
+
+Orings data:
+   Temperature Erosion Blowby Total
+1           53       3      2     5
+2           57       1      0     1
+3           58       1      0     1
+4           63       1      0     1
+5           66       0      0     0
+6           67       0      0     0
+7           67       0      0     0
+8           67       0      0     0
+9           68       0      0     0
+10          69       0      0     0
+11          70       1      0     1
+12          70       0      0     0
+13          70       1      0     1
+14          70       0      0     0
+15          72       0      0     0
+16          73       0      0     0
+17          75       0      0     0
+18          75       0      2     1
+19          76       0      0     0
+20          76       0      0     0
+21          78       0      0     0
+22          79       0      0     0
+23          81       0      0     0
+
+Rows included in pre-launch charts:
+ [1]  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE
+[10] FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE
+[19] FALSE FALSE FALSE FALSE FALSE
+
+Comments for the graphs:
+For the first orings graph, a closed symbol is useful because only the included rows are shown.
+For the second graph, using one symbol is okay because all rows are being shown together.
+For the third graph, different colors and symbols are better because they clearly show which rows were included and which were not included.
+This makes it easier to compare the pre-launch data against the full dataset.
+
+Plots saved as:
+plot_1_wood_vs_dbh.png
+plot_2_wood_vs_dbh_log_scale.png
+plot_3_fitted_relationship_wood_dbh.png
+plot_4_orings_included_only.png
+plot_5_orings_all_rows.png
+plot_6_orings_included_vs_not_included.png
